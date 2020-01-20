@@ -71,7 +71,6 @@ More detailed ones can be found in [vis solutions](https://exams.vis.ethz.ch/cat
 
 * [vis wiki](https://wiki.vis.ethz.ch/Machine_Learning)
 * [cheat sheet (zhj)](AML_cheatsheet-zhj.pdf)
-* [cheat sheet](AML_cheatsheet.pdf)
 * [network structure cheatsheet](AML_cheatsheet-network.pdf)
 * [another cheat sheet](https://raw.githack.com/andbloch/eth-ml-cheat-sheet/master/document.pdf)
     This is gitraw rendered pdf and the corresponding repo can be found by looking at the url
