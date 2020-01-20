@@ -6,4 +6,5 @@
 * [Evolutionary Dynamics](evolutionary-dynamics/README.md)
 * [High Dimension Statistics](high-dim/README.md)
 * [Mathematical Tools in Machine Learning](mmml/README.md)
+* [Molecular and Structural Biology I: Protein Structure and Function](msb1/README.md)
 * [Spatio-Temporal Modelling in Biology](stm/README.md)
