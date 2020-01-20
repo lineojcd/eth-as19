@@ -1,0 +1,169 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath, amsfonts, amssymb}
+
+\begin{document}
+
+<<setup, include=FALSE, cache=FALSE>>=
+# set global chunk options
+opts_chunk$set(comment=NA,tidy=TRUE,message=FALSE,warning=FALSE,echo=TRUE,cache=FALSE,fig.path='figure/minimal-', fig.align='center', fig.show='hold', fig.width=3.5, fig.height=3.5)
+#tidy.opts=list(keep.blank.line=FALSE)
+#options(replace.assign=TRUE, width.cutoff=60)
+knitr::opts_knit$set(global.par = TRUE)
+options(tidy=TRUE,width=62)
+#dep_prev()
+@
+
+
+\section{Discrete time}
+  Suppose you have a difference equation
+	\begin{equation}
+		\label{eq:discrete}
+		x_{t+1} = f(x_t),
+	\end{equation}
+	where $t\in \mathbb{N}$. The system does not change iff $x_{t+1} = x_t = x^*$. The resulting \emph{equilibrium} or \emph{fixed} points $x^*$ are determined by the intersection of the bisectrix and $f$, that is the criterion:
+	\begin{equation}
+		\label{eq:5}
+		x^*=f(x^*).
+	\end{equation}
+	A fixed point can be either attractive, repelling, or neutral. This can be determined from the derivative $f'$ at the fixed point. One finds that {\bf $x^*$ is attractive if $|f'(x^*)| < 1$, and $x^*$ is repelling if $|f'(x^*)|>1$}. To understand these criteria, suppose we are at a position close to the fixed point, $x_t = x^* + \epsilon_t$. We analyze the evolution of the distance $\epsilon_t$. As $\epsilon_t$ is small, we use a Taylor expansion
+	\begin{equation}
+		\label{eq:4}
+		\epsilon_{t+1} = f(x^*+\epsilon_t) - f(x^*) \approx f'(x^*) \epsilon_t.
+	\end{equation}
+	From this equation we see that the increment will only decrease if $|f'(x^*)|<1$, which is exactly the criterion for stability.
+	
+	\subsection{An example}
+	Suppose we have $f(x) = 5x^2(1-x)$. Solving $f(x) = x$ yields the fixed points $x_1^*=0$, $x_2^* = \frac{1}{2} - \frac{\sqrt{5}}{10} \approx 0.28$, and $x^*_3 = \frac{1}{2} + \frac{\sqrt{5}}{10} \approx 0.72$. As shown below, however, only $x^*_1$ and $x^*_3$ are attractive.
+	\begin{center}
+		\includegraphics[width=6.66cm]{tutorial-p2.pdf}
+	\end{center}
+
+
+<<>>=
+steps<-100
+xs<-rep(0,steps)
+xs[1]<-0.95 # initial condition
+for(ii in 2:steps){
+  xs[ii]<-5*xs[ii-1]^2*(1-xs[ii-1])
+}
+@
+
+<<>>=
+par(mar=c(4,4,0.5,0.5))
+par(mgp=c(2.5,1,0))
+par(cex.lab=1.25)
+plot(xs,xlab="step",ylab="x",main="",col="dodgerblue",pch=20,ylim=c(0,1))
+abline(h=0, col="#ff8c00", lwd=2)
+@
+
+<<>>=
+xs[1]<-0.9 # initial condition
+for(ii in 2:steps){
+  xs[ii]<-5*xs[ii-1]^2*(1-xs[ii-1])
+}
+@
+
+
+<<>>=
+plot(xs,xlab="step",ylab="x",main="",col="dodgerblue",pch=20,ylim=c(0,1))
+abline(h=1/2+sqrt(5)/10, col="#ff8c00", lwd=2)
+@
+
+On the Poincar\'e plot of $x_t$ against $x_{t-1}$ we can trace the path to the stable fixed point
+
+<<>>=
+xstm1<-xs[-length(xs)]
+xst<-xs[-1]
+plot(xstm1,xst,xlab=expression(x[t-1]),ylab=expression(x[t]),main="",col="dodgerblue",pch=20,xlim=c(0,1),ylim=c(0,1))
+lines(xstm1,xst,col="dodgerblue",lwd=0.5)
+abline(b=1,a=0, col="#ff8c00", lwd=2)
+@
+
+\section{Continuous time: Single variable models}
+  We consider a dynamical system which is described by the single function of time $x$. The quantity $x(t)$ represents the value of $x$ as a function of the continuous time variable $t$.  The dynamical behaviour of the system is described by the differential equation
+	\begin{equation}
+		\frac{dx}{dt} = f(x(t)).
+	\end{equation}
+	
+	\subsection{Finding equilibrium points}
+	An equilibrium point of the system is a value for the variable such that the state of the system does not change any more. The condition for the equilibrium is that
+	\begin{equation*}
+		\dot{x} = \frac{dx}{dt} =0.
+	\end{equation*}
+	Thus, one has to solve the equation
+	\begin{equation}
+		\label{equil}
+		f(x) = 0.
+	\end{equation}
+	We denote the equilibrium point by $x^*$. Note that the equation \ref{equil} can in general have more than one solution, each corresponding to a different  equilibrium.
+	
+	\subsection{Determining the stability of equilibria}
+	If we plug the equilibrium point in the equation describing the dynamics of the system, we will find that it will not change. But what if the system starts from a point close but not exactly equal to an equilibrium point? This is the subject of stability analysis.
+	
+	Let's suppose that the system at time $t$ is in a position $x(t) = x^* + \varepsilon(t)$, \emph{i.e.}\ displaced by a quantity $\varepsilon$ from an equilibrium point. How will the system evolve? Will the displacement increase or decrease? To answer this question, we can write the evolution of the displacement $\varepsilon(t)$
+	\begin{equation}
+		\frac{d\varepsilon}{dt} = \frac{d}{dt}(x(t)-x^*) = f(x(t)) = f(x^* + \varepsilon(t)).
+	\end{equation}
+	Taking the Taylor expansion of  $f(x)$ around the point $x^*$ we can write
+	\begin{equation}
+		\frac{d\varepsilon}{dt} = f(x^*) + \underbrace{\frac{df}{dx}|_{x=x^*}}_{= r} \varepsilon(t) = 0 + r \varepsilon(t).
+	\end{equation}
+	Solving this differential equation we obtain
+	\begin{equation}
+		\varepsilon(t) = e^{rt}\varepsilon(t=0).
+	\end{equation}
+	It is easy to see that {\bf the condition for the stability of the equilibrium is $r = \frac{df}{dx}|_{x=x^*}  < 0$}.
+
+	\subsection{An example}
+	Consider the case $f(x)=3x(x-1)(x-2)$. The third degree polynomial $f$ has three zero. Thus, the fixed points are given by $x_1^*=0$, $x_2^*=1$, $x_3^*=2$.
+	\begin{center}
+		\includegraphics[width=10cm]{tutorial-p1.pdf}
+	\end{center}
+	
+	Which of them are stable? The derivative of $f$ is $f'(x)=3(x-1)(x-2) + 3x(x-2) + 3x(x-1)$. We find that $f'(x_1^*)=6 $, $f'(x_2^*)=-3$, and $f'(x_3^*)=6$. That is $x_1^*$ and $x_3^*$ are unstable, and $x_2^*$ is stable ($f'(x_2^*) < 0$).
+
+<<>>=
+library(deSolve)
+parms<-c()
+my.atol <- c(1e-6)
+times<-c(0:100)/25
+sdiffeqns <- function(t, s, parms)
+{
+  sd1 <- 3*s[1]*(s[1]-1)*(s[1]-2)
+  list(c(sd1))
+}
+@
+
+We can check this by numerically integrating the differential equation starting at $x^{*}\pm\epsilon$
+
+<<>>=
+initconds<-c(0-1e-6) # just below 0
+out0m <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+initconds<-c(0+1e-6) # just above 0
+out0p <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+initconds<-c(1-1e-6) # just below 1
+out1m <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+initconds<-c(1+1e-6) # just above 1
+out1p <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+initconds<-c(2-1e-6) # just below 2
+out2m <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+initconds<-c(2+1e-6) # just above 2
+out2p <- lsoda(initconds,times,sdiffeqns, rtol=1e-10, atol= my.atol)
+@
+
+<<>>=
+plot(out0p,xlab="time",ylab="x",main="",col="dodgerblue",lty=1,lwd=2,ylim=c(-2,4),xlim=c(0,4))
+lines(out0m,col="#ff8c00",lty=3,lwd=3)
+lines(out2m,col="dodgerblue",lty=1,lwd=2)
+lines(out2p,col="#ff8c00",lty=3,lwd=3)
+lines(out1m,col="#68228b",lty=2,lwd=2)
+lines(out1p,col="#cd2626",lty=3,lwd=3)
+@
+
+
+
+
+
+
+\end{document}
