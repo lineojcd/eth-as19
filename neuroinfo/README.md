@@ -4,6 +4,8 @@
 
 ## Course materials
 
+### Lecture slides and notes
+
 [organization](Lecture/organization.pdf)
 
 | Week    | Date       |     | Topic                                                | Lecturer                |
