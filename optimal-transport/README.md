@@ -7,7 +7,7 @@
 * [Lecture note](Opt_Trsprt.pdf)
 * [Introduction to Optimal TransportMatthew Thorpe](Notes.pdf)
     Quite easy to follow, nice to start
-* [Optimal Transportfor Applied Mathematicians](OTAM-cvgmt.pdf)
+* [Optimal Transport for Applied Mathematicians](OTAM-cvgmt.pdf)
 * [OPTIMAL TRANSPORT AND CURVATURE](Optimal-Transport-and-Curvature.pdf)
 ### Exercises
 
@@ -19,3 +19,17 @@
 ### Literature
 
 ### Other
+
+![](IMG_0973.jpg)
+
+![](IMG_0974.jpg)
+
+![](IMG_0975.jpg)
+
+![](IMG_0976.jpg)
+
+![](IMG_0977.jpg)
+
+![](IMG_0982.jpg)
+
+![](IMG_0983.jpg)
