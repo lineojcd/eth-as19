@@ -69,6 +69,7 @@
 Proposed solution by others, no guarantee.
 More detailed ones can be found in [vis solutions](https://exams.vis.ethz.ch/category/AdvancedMachineLearning)
 
+* [cheat sheet (my hand written one)](AML-cheatsheet-scan.pdf)
 * [vis wiki](https://wiki.vis.ethz.ch/Machine_Learning)
 * [cheat sheet (zhj)](AML_cheatsheet-zhj.pdf)
 * [network structure cheatsheet](AML_cheatsheet-network.pdf)
