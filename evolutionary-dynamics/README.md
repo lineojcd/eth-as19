@@ -2,6 +2,40 @@
 
 [Course website](https://bsse.ethz.ch/cbg/teaching/EvoDyn.html)
 
+## Summary
+
+Feel free to [make a pull request](https://stackoverflow.com/questions/14680711/how-to-do-a-github-pull-request) to add to this section or email me directly!
+
+* [scanned notes by me (with some Chinese in between)]()
+* [summary by zhj (pdf)](ed-zhj.pdf), [word](ed-zhj.docx)
+* [Detailed notes by lyg]()
+
+## Oral Exam info.
+
+Feel free to [make a pull request](https://stackoverflow.com/questions/14680711/how-to-do-a-github-pull-request) to add to this section or email me directly!
+
+For the exam format, you are allowed to choose from one of the topics and Niko will start from there and continue to move on to other areas. He would not ask about detail derivation due to time limit but would go straight to the conclusion.
+
+**Here are some infomation from ppl taking during HS 2019:**
+
+Me:
+1. I choose branching process. So I describe what this is and the properties. And how the Galton Waston population is doomed to extinct or explode in the long run where generation goes to infinity. He asked why and I just stated the theroem. He then followed how we could calculate the probality of extinction for that. I say sth about PGF. He asked for more on that, I write down the formula where I got the index wrong (should have started from zero.). He asked how we can solve $$f(s)=s$$ I explained more. But then he asked why we have solution I couldnt answered. Its because we are certain this will have a solution when N goes to infinity so we can just numerically solve it.
+2. He asked about evolutionary escape: def., escape extinction probability, how to calculate, genotype lattice
+3. Quasisspecies: equation, how do we solve them, what we are solving in terms of the equation: largest eigenvalue and its corresponding vectors.
+4. He also asked about the error thershold example in $uL < 1$ and its correspounding meanings and interpration 
+
+Other#1:
+Evolutionary escape chosen, asked about the coalescent time/event, how to get the exponetially distributed time, quasispecis
+
+
+**Here are some infomation from ppl taking during HS 2018:**
+
+> Celine: i do remember him asking what my favourite topic was so you could basically choose with which topic you want to start of. So I would recommend learning one topic very good even learning some formular by heart. In general he likes if you write things down, equations, drawing the dynamics of smth. E.g. i think there was one lecture about different types of dynamics (represented by special graphs, star, linear etc.) I remember him asking if i could name some and their advantages and disadvantages, so i drew down some graphs and explained what i new about them, i also told him which one i thought was the most realistic, i think he liked that :wink: I also had the cancer lecture, there I had to explain the dynamics, the probability of spreading or smth (i remember something which includes the mutation rate), i knew the equations by heart (luckily) and wrote it down. Then I had this lecture where you can have multiple mutations or smth (i dont remember the lecture but i was quite at the end), and i totally failed that but i managed to get a good grade anyway hahah. So as my last tip, dont be nervous if you dont know everything, he is pretty nice during the exam (regardless how he comes across during the lecture ;)) and he will help you out. The exam was really managable.
+
+> Reto: As I remember the focus was more understanding, so intuitions were important. But the most basic equations you should know by heart and also be able to explain them. I guess it would be helpful to know the basic concepts of each lecture, because I think that he first asked quite broad about a topic, for example what is the quasi-species equation and what does it mean. Then he would go a bit more in depth, but generally he choses about two to three topics, so if you are not to save with one there will be at least be another one. Derivations are not that important, certainly not the complicated ones (also no time for those in the exam, luckily). Anyways, he was very kind, for example when he realizes you have no idea he goes to the next topic I also know of no one who did not pass.
+
+> Hana: I'd say he mostly asks about definitions and important results. In my opinion you don't need to know any derivations, but it is fine to derive something on the spot if it is quick.  At the beginning I could choose one topic (I chose evolutionary graph theory), then he also asked about diffusion theory and coalescence.
+
 ## Course materials
 
 ### Lecture slides and notes
