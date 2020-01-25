@@ -2,6 +2,12 @@
 
 [Course website](https://stat.ethz.ch/lectures/as19/bayesian-statistics.php)
 
+## Exam info.
+
+Below are some info. gathered from others taking this course **HS 2019**
+
+* [A good summary from HS 2014](bayes-f14.pdf)
+
 ## Course materials
 
 ### Lecture slides and notes
