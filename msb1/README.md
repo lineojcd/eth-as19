@@ -59,7 +59,7 @@ Membrane Channels and Transporters
 * [Lecture 2](MSB1_2019_Lecture_2_3_handout.pdf)
 * [Lecture 3](MSB1_2019_Lecture_3_5_handout.pdf)
 * [Lecture 4](MSB1_2019_Lecture_4_3_handout.pdf)
-* [Lecture 5](MSB1_2019_Lecture_5_14_handout.pdf)
+* [Lecture 5](MSB1_2019_Lecture_5_14_handout_red.pdf)
 
 ### Tutorials
 
