@@ -2,6 +2,8 @@
 
 [Course website (login here)](https://lms.uzh.ch/dmz/)
 
+[notes on github previous years](https://github.com/benelot/eth-intro-to-neuroinformatics-summary), [pdf](https://rawcdn.githack.com/benelot/eth-intro-to-neuroinformatics-summary/cec147d8064428afc80ef745e9d1788883e38817/final/summary-neuroinformatics-2018.pdf)
+
 ## Course materials
 
 ### Lecture slides and notes
