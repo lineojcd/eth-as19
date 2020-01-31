@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{serohyph}
+\usepackage[ngerman]{babel}
+\usepackage{latexsym}
+\usepackage[pdfpagelabels,plainpages=false]{hyperref} %Für Übersichts-Lesezeichen im PDF
+			% Fuer Print besser false
+\usepackage{setspace} % Zeilenabstand ändern mi
+%\usepackage{sectsty} % section style package
+\usepackage[%small
+%,compact
+]{titlesec}  % Paket um Überschriften einfach zu manipulieren
+\usepackage{enumitem} % Paket für Auflistungen zu manipulieren (\setlist{noitemsep})
+\usepackage{color} % für Farben
+
+%\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before-code }[ after-code ]
+\titleformat{\section} % titlesec
+  {\normalfont\bfseries} %
+  {\bfseries \thesection}
+  {.5em}
+  {}
+\titlespacing{\section} % Um angehenden Textblock nach \section layouten.
+             {0pc}{2ex}{3ex}[0pc] % Hiermit wird der Abstand zwischen Titel und Text verkelinert (=0)
+%{0pc}{2ex}{0ex}[0pc] Abstand zum linken Rand |Abstand zum oberen Text | Abstand zum unteren Text | Abstand zum rechten Rand
+%ACHTUNG letztes Klammerpaar eckige Klammern!!
+%
+\hypersetup{		% von package hyperref
+colorlinks=true,        % Links farbig ('true') oder nicht ('false'). Fuer
+                        % Print besser 'false'
+linkcolor=red,          % Farbe fuer die internen Links
+urlcolor=blue,          % Farbe fuer externe Links (http://...)
+pdfborder={0 0 0},      % wenn colorlinks nicht gesetzt ist gibt es einen
+                        % Rand dieser Farbe (R, G, B} um den Link
+                        % geoeffnet werden
+pdfpagemode=UseOutlines,% andere Moeglichkeiten: 'None', 'UseThumbs'
+                        % und 'FullScreen'
+pdftitle={Titel des Dokuments}, pdfauthor={Autor(en)},
+pdfsubject={Thema}, pdfkeywords={Keywords} }
+
+\addtolength{\textwidth}{2cm} %Textblcok-Breite
+\addtolength{\oddsidemargin}{-1cm} %Abst. 1 inch von linkem Rand
+\addtolength{\headsep}{-2cm} %Abst zu Kopfzeile
+\addtolength{\textheight}{3cm} % Textblock-Länge
+%
+\def\headtitle{Evolutionary Dynamics} % ToDo: Wiedergebbare Titel für den gesammten Text \headtitle
+%
+\title{\headtitle}
+\author{VIS}
+\makeindex
+
+\begin{document}
+\pagestyle{empty}
+\parindent 0pt	% kein Erstzeileneinzug für das ganze Dokument
+\flushleft % linksbündig
+\setlist{noitemsep} %Kein Zeilenabstand zwischen Listen
+%
+%\maketitle
+%
+%\color{blue}
+\color[rgb]{0,0,.5}
+{\LARGE \headtitle\par}
+\hrulefill\\
+%
+\section*{Oral Exam Report}
+\vspace{.5cm}
+%\begin{onehalfspace} %geht nur bei tabular, nicht bei "`tabbing"'
+  \begin{tabbing}
+    \quad \= Examiner:XXXX \= XXXXXXXXXXX \kill % Abstandgebende-Zeile
+    \>Course:		\>	\headtitle\\[1ex]
+    \>Examiner: 	\>	Niko Beerenwinkel \\[1ex]	%ToDo
+    \>Protocol: 	\>	Niko Beerenwinkel \\[1ex]	%ToDo
+    \>Semester:	\>	HS19\\[1ex]	%ToDo
+    \>Datum: 		\>	2020-02-24%ToDo
+  \end{tabbing}
+%\end{onehalfspace}%
+%
+%\vspace{0.1cm}
+\hrulefill\\
+\color{black}
+\vspace{.7cm}
+
+%ToDo
+\section{First question (Topic chosen by student)}
+I choose branching process in biology (Chapter 10). So I describe what this is and the properties. I explained how the Galton-Watson population is doomed to extinct or explode in the long run where generation goes to infinity.
+
+$$
+\lim_{n \to \infty} \mathcal{P}(Z_n = 0 or \infty) = 1
+$$
+He asked why and I just stated the theorem in lecture notes. He then asked how we could calculate the probability of extinction for that ($\mathcal{P}(Z_n = 0$). 
+
+I answered that you can calculated this probability by solving a function w.r.t. probability generating function (PGF) ($f(s) = s, s \in (0,1)$). He asked for more on that, I write down the formula of PGF where I got the index wrong (should have started from zero.). He asked how we can solve I explained more. But then he asked why we have solution I couldn't answered. 
+
+He then explained why, which is pretty straight forward. Since we have the theorem proved by some mathematicians, we can have the $f(s) = s$ would definitely converge to some value when we do it for a long run numerically. It's because we are certain this will have a solution when N goes to infinity so we can just numerically solve it.
+
+\section{Second question}
+He asked about evolutionary escape: definition, escape extinction probability, how to calculate, what is a genotype lattice. I give a general idea of the lattice by describing it being a unit cube in n dimension and how the escape is only a partially path within that cube. He is pretty satisfied with that
+
+\section{Third question}
+Quasispecies: equation, how do we solve them, what we are solving in terms of the equation: largest eigenvalue and its corresponding vectors.
+
+The equation you should known by heart. I wrote down the simple case for $X_i$ and then just say it how we can write it in terms of mutation matrix and fitness. I kind of lost it when he asked about how we can solved this equation but I then remember it's only a eigenvalue problem (largest eigenvalues and its eigen-vectors, details in lecture notes) 
+
+\section{Forth question}
+He also asked about the error threshold example in $uL < 1$ and its corresponding meanings and interpretation. I have little time as it's approaching the end but I just briefly explained how longer sequence in the virus example would lead to a evolutionary meltdown and what that is (basically just means that the fittest doesn't get to survive)
+
+\section{Short}
+
+Niko is calm and very clear in terms of describing the questions so don't be afraid. Even you quite don't understand where he is asking, you can still ask him about it. He is so much concerned about the derivation of complicated equations but rather the general ideas behind the theorems and numerical calculation.
+
+\end{document}
