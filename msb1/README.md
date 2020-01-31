@@ -4,6 +4,9 @@
 
 ## Course materials
 
+* [summary by other HS19](msb1-note.pdf)
+* [exam HS18](msb-exam.pdf) It's very good for practice ([docx here](msb-exam.docx))
+
 ### Lecture slides and notes
 
 #### Lectures 1-5 (September 23 - October 21, 2019) R. Glockshuber
