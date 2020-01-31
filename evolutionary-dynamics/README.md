@@ -6,7 +6,7 @@
 
 Feel free to [make a pull request](https://stackoverflow.com/questions/14680711/how-to-do-a-github-pull-request) to add to this section or email me directly!
 
-* [scanned notes by me (with some Chinese in between)]()
+* [scanned notes by me (with some Chinese in between)](notes-evo-dym.pdf)
 * [summary by zhj (pdf)](ed-zhj.pdf), [word](ed-zhj.docx)
 * [Detailed notes by lyg]()
 

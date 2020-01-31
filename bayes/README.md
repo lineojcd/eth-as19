@@ -7,6 +7,7 @@
 Below are some info. gathered from others taking this course **HS 2019**
 
 * [A good summary from HS 2014](bayes-f14.pdf)
+* [My summary](notes-bayes.pdf)
 
 ## Course materials
 
