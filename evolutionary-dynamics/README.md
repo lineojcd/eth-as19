@@ -8,6 +8,7 @@ Feel free to [make a pull request](https://stackoverflow.com/questions/14680711/
 
 * [Here](exam_transcript.pdf) is my exam summary for HS 2019 but you can find more on [vis community solutions](https://exams.vis.ethz.ch/) but you have to pay lol.
 * [scanned notes by me (with some Chinese in between)](notes-evo-dym.pdf)
+* [scanned notes by lxg](notes-evo-dym-lxg.pdf)
 * [summary by zhj (pdf)](ed-zhj.pdf), [word](ed-zhj.docx)
 
 ## Oral Exam info.
