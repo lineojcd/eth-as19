@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{serohyph}
+\usepackage[ngerman]{babel}
+\usepackage{latexsym}
+\usepackage[pdfpagelabels,plainpages=false]{hyperref} %Für Übersichts-Lesezeichen im PDF
+			% Fuer Print besser false
+\usepackage{setspace} % Zeilenabstand ändern mi
+%\usepackage{sectsty} % section style package
+\usepackage[%small
+%,compact
+]{titlesec}  % Paket um Überschriften einfach zu manipulieren
+\usepackage{enumitem} % Paket für Auflistungen zu manipulieren (\setlist{noitemsep})
+\usepackage{color} % für Farben
+
+%\titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before-code }[ after-code ]
+\titleformat{\section} % titlesec
+  {\normalfont\bfseries} %
+  {\bfseries \thesection}
+  {.5em}
+  {}
+\titlespacing{\section} % Um angehenden Textblock nach \section layouten.
+             {0pc}{2ex}{3ex}[0pc] % Hiermit wird der Abstand zwischen Titel und Text verkelinert (=0)
+%{0pc}{2ex}{0ex}[0pc] Abstand zum linken Rand |Abstand zum oberen Text | Abstand zum unteren Text | Abstand zum rechten Rand
+%ACHTUNG letztes Klammerpaar eckige Klammern!!
+%
+\hypersetup{		% von package hyperref
+colorlinks=true,        % Links farbig ('true') oder nicht ('false'). Fuer
+                        % Print besser 'false'
+linkcolor=red,          % Farbe fuer die internen Links
+urlcolor=blue,          % Farbe fuer externe Links (http://...)
+pdfborder={0 0 0},      % wenn colorlinks nicht gesetzt ist gibt es einen
+                        % Rand dieser Farbe (R, G, B} um den Link
+                        % geoeffnet werden
+pdfpagemode=UseOutlines,% andere Moeglichkeiten: 'None', 'UseThumbs'
+                        % und 'FullScreen'
+pdftitle={Titel des Dokuments}, pdfauthor={Autor(en)},
+pdfsubject={Thema}, pdfkeywords={Keywords} }
+
+\addtolength{\textwidth}{2cm} %Textblcok-Breite
+\addtolength{\oddsidemargin}{-1cm} %Abst. 1 inch von linkem Rand
+\addtolength{\headsep}{-2cm} %Abst zu Kopfzeile
+\addtolength{\textheight}{3cm} % Textblock-Länge
+%
+\def\headtitle{Spatio-Temporal Modelling in Biology} % ToDo: Wiedergebbare Titel für den gesammten Text \headtitle
+%
+\title{\headtitle}
+\author{VIS}
+\makeindex
+
+\begin{document}
+\pagestyle{empty}
+\parindent 0pt	% kein Erstzeileneinzug für das ganze Dokument
+\flushleft % linksbündig
+\setlist{noitemsep} %Kein Zeilenabstand zwischen Listen
+%
+%\maketitle
+%
+%\color{blue}
+\color[rgb]{0,0,.5}
+{\LARGE \headtitle\par}
+\hrulefill\\
+%
+\section*{Oral Exam Report}
+\vspace{.5cm}
+%\begin{onehalfspace} %geht nur bei tabular, nicht bei "`tabbing"'
+  \begin{tabbing}
+    \quad \= Examiner:XXXX \= XXXXXXXXXXX \kill % Abstandgebende-Zeile
+    \>Course:		\>	\headtitle\\[1ex]
+    \>Examiner: 	\>	Iber, Dagmar, Prof. Dr.\\[1ex]	%ToDo
+    \>Protocol: 	\>	Iber, Dagmar, Prof. Dr.\\[1ex]	%ToDo
+    \>Semester:	\>	HS12\\[1ex]	%ToDo
+    \>Datum: 		\>	2020-02-06%ToDo
+  \end{tabbing}
+%\end{onehalfspace}%
+%
+%\vspace{0.1cm}
+\hrulefill\\
+\color{black}
+\vspace{.7cm}
+
+%ToDo
+
+\section{Setting}
+
+I was seated in the office at Zentrum with the TA and Prof. Iber.
+
+\section{First question}
+
+Since I was the last one to take the course apparently, she gave me the option to choose a topic I like. I chose Turing pattern in biology.
+
+I started describing the two component system (the easiest case) and briefly stated how causes the Turing pattern to emerge: the diffusion driven instability starting from noise. I also wrote down the derivation of all the conditions involving $det(J) < 0, tr(J) > 0$ and $D_1, D_2 > 0$ and different and another condition. The latter is the condition for instability. And I also wrote why we need $det(H) < 0$ as well as how it connects to wave number $k$ and $n$. 
+
+In-between the writing, she would asked about the relationship between the wave number and the patterning in the end, which is how many modes you would get finally.
+
+She also asked me to draw in the graph of $\mathrm{Re}(\lambda)$ versus $k^2$. I got the direction wrong initially but corrected it after she gave a hint and re-checked the equation. It is easier to remember by knowing when $k^2 = 0$, without diffusion, would resulted in a stable solution and thus negative real part of eigen-values.
+
+\section{Second question Problem with scaling domain}
+
+Prof. asked me what happens in general in case of growing domain. I answered it with a specific model: the standard morphogen gradient model with constant degradation. I wrote down the formula and show how the difference in source can affect the read-out: $\Delta x = \lambda \ln{(c_0^*/c_0)}$. She then further asked me how would this steady state gradient be affected by this result. I didn't quite get the idea in the first place. But I realized that I could use the plot of $ln(c_0)$ versus $x$. If the domain length grows and under the french flag model, the read-out sensed by the receptors would not scale properly with a linearly growing domain. She also asked about how would one deal with a growling domain and how the coefficients cope with that. Due to a lack of time, I just wrote down the equation $\frac{\partial}{\partial t} c + \nabla(c\cdot u) = R(c) + D \Delta c$ and how to keep lambda fixed by letting $D/k \propto L^2$
+
+\end{document}
