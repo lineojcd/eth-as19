@@ -5,6 +5,9 @@
 Gaps in knowledge can be filled by reviewing this course: [Mathematical Modelling in Systems Biology](https://bsse.ethz.ch/cobi/teaching/626-0005-00l-mathematical-modelling-in-systems-biology.html)
 ## Course materials
 
+* [Here is my exam summary](stm_exam_transcript.pdf) I uploaded to VIS, [tex](stm_exam_transcript.tex) can be found here.
+* [My hand-written note](stm-note.pdf)
+
 ### Lecture slides and notes
 
 * [Lecture 2 Diffusion Equation](Lecture/02.pdf)
@@ -20,6 +23,7 @@ Gaps in knowledge can be filled by reviewing this course: [Mathematical Modellin
 * [Lecture 11 Growth Control](Lecture/11.pdf)
 * [Lecture 12 Growth Control](Lecture/12.pdf)
 * [Lecture 13 Epithelial Organization](Lecture/13.pdf)
+* [Summary](MSc_Summary_HS2019.pdf) and [the one with my answers](stm-sum.pdf)
 
 ### Exercises
 
